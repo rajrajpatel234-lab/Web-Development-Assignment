@@ -1,0 +1,6 @@
+<svg id="Icon" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
+  <rect id="Icon_Frame_Background_" data-name="Icon [Frame Background]" width="11" height="11" fill="none"/>
+  <path id="Vector" d="M4.125,2.449V6.66L0,4.231V0Z" transform="translate(1.031 3.652)" fill="#fff"/>
+  <path id="Vector-2" data-name="Vector" d="M0,2.449,4.125,0V4.231L0,6.66Z" transform="translate(5.844 3.652)" fill="#fff"/>
+  <path id="Vector-3" data-name="Vector" d="M4.125,4.813,0,2.406,4.125,0,8.25,2.406Z" transform="translate(1.375 0.687)" fill="#fff"/>
+</svg>
