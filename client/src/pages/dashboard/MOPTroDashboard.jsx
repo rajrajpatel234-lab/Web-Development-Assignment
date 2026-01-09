@@ -431,13 +431,9 @@ export default function MOPTroDashboard() {
               <div className="product-item">
                 <div className="product-image">
                   <img
-                    src="../../assets/Dashboard/SNAIL 1.png"
+                    src={icons.wasp}
                     alt="WASP"
-                    onError={(e) => {
-                      e.target.style.display = "none";
-                      e.target.parentElement.innerHTML =
-                        '<div style="font-size: 48px;">🔧</div>';
-                    }}
+                    
                   />
                 </div>
                 <div className="product-info">
@@ -454,13 +450,9 @@ export default function MOPTroDashboard() {
               <div className="product-item">
                 <div className="product-image">
                   <img
-                    src="../../assets/Dashboard/SNAIL 1@2x.png"
-                    alt="SNAIL"
-                    onError={(e) => {
-                      e.target.style.display = "none";
-                      e.target.parentElement.innerHTML =
-                        '<div style="font-size: 48px;">🏗️</div>';
-                    }}
+                    src={icons.snail}
+                    alt="wasp"
+                   
                   />
                 </div>
                 <div className="product-info">
@@ -477,13 +469,9 @@ export default function MOPTroDashboard() {
               <div className="product-item">
                 <div className="product-image">
                   <img
-                    src="/assets/dashboard/bike.jpg"
+                    src={icons.bike}
                     alt="E-Vehicle"
-                    onError={(e) => {
-                      e.target.style.display = "none";
-                      e.target.parentElement.innerHTML =
-                        '<div style="font-size: 48px;">🏍️</div>';
-                    }}
+                  
                   />
                 </div>
                 <div className="product-info">

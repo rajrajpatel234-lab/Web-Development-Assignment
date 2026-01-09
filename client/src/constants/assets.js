@@ -12,6 +12,14 @@ import reactangle from "../assets/Dashboard/Rectangle 347.svg";
 import group from "../assets/Dashboard/Group.svg"
 import vector1 from "../assets/Dashboard/Vector-1.svg"
 import valet from "../assets/Dashboard/IONIcon-W-wallet-default.svg"
+import rocket from "../assets/Dashboard/IONIcon-R-rocket-sharp.svg"
+import cart from "../assets/Dashboard/IONIcon-C-cart-default.svg"
+import build from "../assets/Dashboard/Icon.svg"
+import snail from "../assets/Dashboard/SNAIL 1.png";
+import bike from "../assets/Dashboard/B 1.png"
+import wasp from "../assets/Dashboard/wasp.png";
+
+
 export const icons = {
   home: homeIcon,
   bar:barback,
@@ -26,5 +34,12 @@ export const icons = {
   reactangle:reactangle,
   group:group,
   vector1:vector1,
-  valet:valet
+  valet:valet,
+  rocket:rocket,
+  cart:cart,
+  build:build,
+  snail:snail,
+  bike:bike,
+  wasp:wasp,
+
 };

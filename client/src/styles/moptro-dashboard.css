@@ -870,20 +870,19 @@ opacity: 1;
 .product-btn {
   background: transparent;
   color: var(--text-primary);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+ border: 0.9999999403953552px solid #FFFFFF;
   padding: 8px 16px;
-  border-radius: 6px;
+  border-radius: 12px;
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  width: 100%;
+  left: 689px;
+width: 111px;
+height: 35px;
 }
 
-.product-btn:hover {
-  background: var(--accent-blue);
-  border-color: var(--accent-blue);
-}
+
 
 /* Footer */
 .dashboard-footer {
