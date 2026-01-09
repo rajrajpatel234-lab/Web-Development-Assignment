@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" viewBox="0 0 26 26">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.277" y1="0.084" x2="0.966" y2="0.909" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#060b28" stop-opacity="0.941"/>
+      <stop offset="1" stop-color="#0a0e23" stop-opacity="0.49"/>
+      <stop offset="1" stop-color="#0a0e23" stop-opacity="0.69"/>
+    </linearGradient>
+  </defs>
+  <g id="Icon" transform="translate(-379.5 -198)">
+    <rect id="Rectangle_42" data-name="Rectangle 42" width="26" height="26" rx="8" transform="translate(379.5 198)" fill="url(#linear-gradient)"/>
+    <g id="edit" transform="translate(386.499 205)">
+      <path id="Vector" d="M0,0H12V12H0Z" fill="none"/>
+      <path id="Vector-2" data-name="Vector" d="M.075,7.051,5.53,1.6,7.4,3.471,1.945,8.926A.235.235,0,0,1,1.77,9H.25A.248.248,0,0,1,0,8.751V7.231a.245.245,0,0,1,.075-.18Zm8.78-5.03-.915.915L6.065,1.061,6.98.146a.5.5,0,0,1,.7,0l1.17,1.17a.5.5,0,0,1,0,.7Z" transform="translate(1.5 1.499)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

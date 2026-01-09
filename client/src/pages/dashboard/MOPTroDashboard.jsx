@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../styles/moptro-dashboard.css";
 import { icons } from "../../constants/assets";
@@ -10,8 +10,14 @@ import {
   BsBellFill,
   BsGearFill,
   BsSearch,
+  BsGridFill,
+  BsPeopleFill,
+  BsFolderFill,
+  BsPencilFill,
   BsCarFrontFill,
+  BsLightningChargeFill,
   BsBarChartFill,
+  BsBatteryCharging,
 } from "react-icons/bs";
 
 export default function MOPTroDashboard() {
@@ -177,168 +183,136 @@ export default function MOPTroDashboard() {
             </div>
 
             {/* Battery Circle */}
-            <div className="battery-circle-container">
-              <div className="battery-circle">
-                <svg className="battery-svg" viewBox="0 0 140 140">
-                  <defs>
-                    <linearGradient id="batteryGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                      <stop offset="0%" stopColor="#05CD99" stopOpacity="1" />
-                      <stop offset="100%" stopColor="#05CD99" stopOpacity="0.1" />
-                    </linearGradient>
-                  </defs>
-                  <circle
-                    className="battery-bg"
-                    cx="70"
-                    cy="70"
-                    r="58"
-                    strokeWidth="12"
-                    stroke="rgba(255,255,255,0.1)"
-                    fill="none"
-                  />
-                  <circle
-                    className="battery-progress"
-                    cx="70"
-                    cy="70"
-                    r="58"
-                    strokeWidth="12"
-                    stroke="url(#batteryGradient)"
-                    fill="none"
-                    strokeDasharray={`${2 * Math.PI * 58}`}
-                    strokeDashoffset={`${2 * Math.PI * 58 * (1 - batteryPercentage / 100)}`}
-                    strokeLinecap="round"
-                    transform="rotate(-90 70 70)"
-                  />
-                </svg>
-                <div className="battery-text">
-                  <img src={icons.vector} alt="charging" className="battery-icon" />
-                  <span className="battery-percentage">{batteryPercentage}%</span>
-                  <span className="battery-label">Charging</span>
-                </div>
+            <div className="battery-circle">
+              <div className="battery-text">
+                <img src={icons.vector} alt="vector" />
+
+               
+              
+
+             
+                <span className="battery-percentage">{batteryPercentage}%</span>
+                <span className="battery-label">Charging</span>
               </div>
-              <div className="battery-time">
-                <strong>0h 58 min</strong> Time to full charge
-              </div>
+            
+            </div>
+
+            <div className="battery-time">
+              <strong>0h 58 min</strong> Time to full charge
             </div>
 
             {/* Metrics */}
             <div className="metrics-grid">
               <div className="metric-item">
-                <div className="metric-content">
-                  <div className="metric-icon-wrapper">
-                    <div className="metric-icon rect green">
-                      <img src={icons.group} alt="battery" />
-                    </div>
+                <div className="metric-header">
+                  <div className="metric-icon rect green">
+                  <img src={icons.group} alt="." />
                   </div>
-                  <div className="metric-info">
-                    <div className="metric-label">Battery Health</div>
-                    <div className="metric-value">76%</div>
-                  </div>
+                 
                 </div>
+                <div className="metric-label">Battery Health</div>
+                <div className="metric-value">76%</div>
               </div>
 
               <div className="metric-item">
-                <div className="metric-content">
-                  <div className="metric-icon-wrapper">
-                    <div className="metric-icon rect blue">
-                      <BsCarFrontFill />
-                    </div>
-                  </div>
-                  <div className="metric-info">
-                    <div className="metric-label">Efficiency</div>
-                    <div className="metric-value">+20%</div>
+                <div className="metric-header">
+                  <div className="metric-icon rect purple">
+                   <img src={icons.vector1} alt="." />
                   </div>
                 </div>
+                <div className="metric-label">Consumption</div>
+                <div className="metric-value">163W/km</div>
               </div>
 
               <div className="metric-item">
-                <div className="metric-content">
-                  <div className="metric-icon-wrapper">
-                    <div className="metric-icon rect purple">
-                      <img src={icons.vector1} alt="consumption" />
-                    </div>
-                  </div>
-                  <div className="metric-info">
-                    <div className="metric-label">Consumption</div>
-                    <div className="metric-value">163W/km</div>
+                <div className="metric-header">
+                  <div className="metric-icon rect blue">
+                    <BsBarChartFill />
                   </div>
                 </div>
+                <div className="metric-label">This Week</div>
+                <div className="metric-value">1.342km</div>
               </div>
 
               <div className="metric-item">
-                <div className="metric-content">
-                  <div className="metric-icon-wrapper">
-                    <div className="metric-icon rect blue">
-                      <BsBarChartFill />
-                    </div>
-                  </div>
-                  <div className="metric-info">
-                    <div className="metric-label">This Month</div>
-                    <div className="metric-value">1,342km</div>
+                <div className="metric-header">
+                  <div className="metric-icon rect blue">
+                    <BsCarFrontFill />
                   </div>
                 </div>
+                <div className="metric-label">Efficiency</div>
+                <div className="metric-value">+20</div>
               </div>
             </div>
           </div>
 
           {/* Utilization Chart Card */}
           <div className="utilization-card">
+            <div className="utilization-header">
+             
+            </div>
+
             {/* Bar Chart */}
-            <div className="bar-chart-wrapper">
-              <div className="bar-chart">
-                {[65, 45, 30, 50, 90, 75, 95, 85, 60, 40].map((height, index) => (
-                  <div
-                    key={index}
-                    className="bar-item"
-                    style={{
-                      height: `${height}%`,
-                    }}
-                  />
-                ))}
+            <div
+              style={{
+                height: "200px",
+                
+                display: "flex",
+                alignItems: "flex-end",
+                gap: "16px",
+                padding: "20px 0",
+                borderRadius: "15px"
+              }}
+              className="bar-chart"
+            >
+              {[65, 85, 55, 90, 75, 95, 80, 70].map((height, index) => (
+                <div
+                  key={index}
+                  style={{
+                    flex: 1,
+                    height: `${height}%`,
+                    background:
+                      "linear-gradient(180deg, #ffffffff 0%, #ffffffff 100%)",
+                    borderRadius: "8px 8px 0 0",
+                    transition: "all 0.3s ease",
+                  }}
+                />
+              ))}
+            </div>
+             <div className="card-title-section">
+                <h3 className="card-main-title">Utilization</h3>
+                <p className="card-subtitle">+2 miles from last week</p>
               </div>
-            </div>
-            
-            <div className="utilization-title-section">
-              <h3 className="card-main-title">Utilization</h3>
-              <p className="card-subtitle-green">(+23%) than last week</p>
-            </div>
 
             {/* Utilization Stats */}
             <div className="utilization-stats-grid">
               <div className="stat-card">
-                <div className="stat-header">
-                  <div className="stat-icon-box blue">
-                    <img src={icons.valet} alt="wallet" />
-                  </div>
-                  <div className="stat-label">Wallet</div>
+                <div className="stat-icon green">
+                  <img src={icons.valet} alt="." />
                 </div>
                 <div className="stat-value">$ 32,984</div>
+                <div className="stat-label">Estimated Cost</div>
               </div>
               <div className="stat-card">
-                <div className="stat-header">
-                  <div className="stat-icon-box blue">
-                    <img src={icons.rocket} alt="range" />
-                  </div>
-                  <div className="stat-label">Average Range</div>
+                <div className="stat-icon green">
+                  <img src={icons.rocket} alt="." />
                 </div>
                 <div className="stat-value">35 Km</div>
+                <div className="stat-label">Average Range</div>
               </div>
               <div className="stat-card">
-                <div className="stat-header">
-                  <div className="stat-icon-box blue">
-                    <img src={icons.cart} alt="consumables" />
-                  </div>
-                  <div className="stat-label">Consumables Cost</div>
+                <div className="stat-icon green">
+                  <img src={icons.cart} alt="." />
                 </div>
                 <div className="stat-value">$ 2,400</div>
+                <div className="stat-label">Consumables Cost</div>
               </div>
               <div className="stat-card">
-                <div className="stat-header">
-                  <div className="stat-icon-box blue">
-                    <img src={icons.build} alt="maintenance" />
-                  </div>
-                  <div className="stat-label">Maintenance cost</div>
+                <div className="stat-icon green">
+                  <img src={icons.build} alt="." />
                 </div>
                 <div className="stat-value">$ 5000</div>
+                <div className="stat-label">Maintenance cost</div>
               </div>
             </div>
           </div>
